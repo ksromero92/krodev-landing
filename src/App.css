@@ -1,0 +1,249 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* Modo oscuro general */
+.page-dark {
+  background-color: #020617;
+  /* similar a slate-950 */
+  color: #e5e7eb;
+  /* slate-200 */
+}
+
+/* Secciones en modo oscuro */
+.page-dark .section-light {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.page-dark .section-muted {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.page-dark .card {
+  background-color: #020617;
+  border-color: #1f2937;
+  /* slate-800 aprox */
+}
+
+.page-dark .hero {
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+}
+
+/* Links & textos para que no se pongan amarillos */
+.page-dark a,
+.page-dark .nav-link,
+.page-dark .card-link {
+  color: #e5e7eb;
+}
+
+.page-dark a:hover,
+.page-dark .nav-link:hover,
+.page-dark .card-link:hover {
+  color: #03a688;
+}
+
+/* Header layout con toggles */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* En mobile ya tienes algo que oculta .nav; esto no lo cambiamos */
+.header-toggles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Botones de idioma */
+.lang-toggle {
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  overflow: hidden;
+  font-size: 11px;
+}
+
+.page-dark .lang-toggle {
+  border-color: #374151;
+}
+
+.lang-toggle-btn {
+  padding: 4px 8px;
+  background: transparent;
+  color: #4b5563;
+  border: none;
+  cursor: pointer;
+}
+
+.page-dark .lang-toggle-btn {
+  color: #d1d5db;
+}
+
+.lang-toggle-btn-active {
+  background: #03a688;
+  color: #ffffff;
+}
+
+/* Botón tema */
+.theme-toggle-btn {
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 4px 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.page-dark .theme-toggle-btn {
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+
+/* Modo oscuro general */
+.page-dark {
+  background-color: #020617;
+  /* similar a slate-950 */
+  color: #e5e7eb;
+  /* slate-200 */
+}
+
+/* Secciones en modo oscuro */
+.page-dark .section-light {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.page-dark .section-muted {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.page-dark .card {
+  background-color: #020617;
+  border-color: #1f2937;
+  /* slate-800 aprox */
+}
+
+.page-dark .hero {
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+}
+
+/* Links & textos para que no se pongan amarillos */
+.page-dark a,
+.page-dark .nav-link,
+.page-dark .card-link {
+  color: #e5e7eb;
+}
+
+.page-dark a:hover,
+.page-dark .nav-link:hover,
+.page-dark .card-link:hover {
+  color: #03a688;
+}
+
+/* Header layout con toggles */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* En mobile ya tienes algo que oculta .nav; esto no lo cambiamos */
+.header-toggles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Botones de idioma */
+.lang-toggle {
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  overflow: hidden;
+  font-size: 11px;
+}
+
+.page-dark .lang-toggle {
+  border-color: #374151;
+}
+
+.lang-toggle-btn {
+  padding: 4px 8px;
+  background: transparent;
+  color: #4b5563;
+  border: none;
+  cursor: pointer;
+}
+
+.page-dark .lang-toggle-btn {
+  color: #d1d5db;
+}
+
+.lang-toggle-btn-active {
+  background: #03a688;
+  color: #ffffff;
+}
+
+/* Botón tema */
+.theme-toggle-btn {
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 4px 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.page-dark .theme-toggle-btn {
+  border-color: #374151;
+  color: #e5e7eb;
+}
