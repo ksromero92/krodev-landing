@@ -7,11 +7,11 @@ export const productsConfig = {
   },
   aviscan: {
     version: "1.0.0",
-    landingUrl: null,
+    landingUrl: "https://aviscan-app.vercel.app/",
     android: {
       available: true,
       downloadUrl:
-        "https://expo.dev/accounts/krodev/projects/aviscan-app/builds/95655e9e-b999-48e5-b1a9-90395636add8",
+        "https://expo.dev/accounts/krodev/projects/aviscan-app/builds/d9c6289e-d0d8-4f32-ba32-0ab1cd7565ba",
     },
     ios: {
       available: false,

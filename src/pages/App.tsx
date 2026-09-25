@@ -43,9 +43,10 @@ const STRINGS = {
     proyectosAviScanStatus: "Piloto",
     proyectosAviScanText:
       "Digitaliza los registros de granja y convierte formatos físicos en información productiva.",
-    proyectosAviScanAndroid: "Descargar piloto Android",
+    proyectosAviScanLink: "Conocer AviScan →",
+    proyectosAviScanAndroid: "Instalar piloto Android",
     proyectosAviScanIosDownload: "Descargar piloto iPhone",
-    proyectosAviScanIos: "iPhone · Próximamente",
+    proyectosAviScanIosAccess: "Solicitar acceso iPhone",
 
     proyectosEnFocoTitle: "EnFoco",
     proyectosEnFocoText:
@@ -105,9 +106,10 @@ const STRINGS = {
     proyectosAviScanStatus: "Pilot",
     proyectosAviScanText:
       "Digitizes farm records and turns physical forms into actionable production data.",
-    proyectosAviScanAndroid: "Download Android pilot",
+    proyectosAviScanLink: "Discover AviScan →",
+    proyectosAviScanAndroid: "Install Android pilot",
     proyectosAviScanIosDownload: "Download iPhone pilot",
-    proyectosAviScanIos: "iPhone · Coming soon",
+    proyectosAviScanIosAccess: "Request iPhone access",
 
     proyectosEnFocoTitle: "EnFoco",
     proyectosEnFocoText:
@@ -267,6 +269,9 @@ function App() {
                   {t.proyectosAviScanStatus} · v{productsConfig.aviscan.version}
                 </p>
                 <p className="card-text">{t.proyectosAviScanText}</p>
+                <a href={productsConfig.aviscan.landingUrl} className="card-link">
+                  {t.proyectosAviScanLink}
+                </a>
                 <div className="card-actions">
                   {productsConfig.aviscan.android.available &&
                     productsConfig.aviscan.android.downloadUrl && (
@@ -290,9 +295,14 @@ function App() {
                       {t.proyectosAviScanIosDownload}
                     </a>
                   ) : (
-                    <span className="btn btn-secondary product-unavailable">
-                      {t.proyectosAviScanIos}
-                    </span>
+                    <a
+                      href={productsConfig.aviscan.landingUrl}
+                      className="btn btn-secondary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.proyectosAviScanIosAccess}
+                    </a>
                   )}
                 </div>
               </div>
