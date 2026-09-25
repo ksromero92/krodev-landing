@@ -282,6 +282,33 @@ a {
   text-decoration: underline;
 }
 
+.product-status {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--krodev-dark);
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.card-actions .card-link {
+  margin-top: 0;
+}
+
+.product-unavailable,
+.product-unavailable:hover {
+  cursor: default;
+  color: #6b7280;
+  border-color: #d1d5db;
+  background-color: #f9fafb;
+}
+
 /* Footer */
 .footer {
   border-top: 1px solid #e5e7eb;

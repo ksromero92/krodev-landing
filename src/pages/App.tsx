@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { productsConfig } from "../config/products";
 
 const STRINGS = {
   es: {
@@ -38,18 +39,24 @@ const STRINGS = {
       "Diseño de flujos automáticos, orquestación con n8n y construcción de agentes IA que consultan directamente tus sistemas (APIs, bases de datos, archivos). Copilotos para procesos internos, soporte, análisis y operación.",
 
     proyectosTitle: "Proyectos",
+    proyectosAviScanTitle: "AviScan",
+    proyectosAviScanStatus: "Piloto",
+    proyectosAviScanText:
+      "Digitaliza los registros de granja y convierte formatos físicos en información productiva.",
+    proyectosAviScanLink: "Conocer AviScan →",
+    proyectosAviScanAndroid: "Instalar piloto Android",
+    proyectosAviScanIosDownload: "Descargar piloto iPhone",
+    proyectosAviScanIosAccess: "Solicitar acceso iPhone",
+
+    proyectosEnFocoTitle: "EnFoco",
+    proyectosEnFocoText:
+      "Organiza tareas, rutinas y ciclos de trabajo para convertir la constancia en progreso visible.",
+    proyectosEnFocoLink: "Conocer EnFoco →",
+
     proyectosKroBiTitle: "KroBi",
     proyectosKroBiText:
       "Plataforma SaaS de datos, automatización e IA para empresas con facturación electrónica. Consolida ventas, inventarios y otras fuentes en dashboards y un agente inteligente.",
     proyectosKroBiLink: "Ver proyecto →",
-
-    proyectosInerfitTitle: "Inerfit",
-    proyectosInerfitText:
-      "Landing page moderna y soporte digital para un gimnasio especializado. Enfoque en velocidad, experiencia de usuario y conversión de leads a clientes.",
-
-    proyectosAguaMariaTitle: "Agua María",
-    proyectosAguaMariaText:
-      "Implementación de KroBi: unificación de ventas por tienda y canal, homologación de productos, dashboards operativos y automatización de reportes para la dirección.",
 
     contactoTitle: "Contacto",
     contactoText:
@@ -95,18 +102,24 @@ const STRINGS = {
       "Design of automated flows, orchestration with n8n and AI agents that talk directly to your systems (APIs, databases, files). Copilots for internal processes, support, analysis and operations.",
 
     proyectosTitle: "Projects",
+    proyectosAviScanTitle: "AviScan",
+    proyectosAviScanStatus: "Pilot",
+    proyectosAviScanText:
+      "Digitizes farm records and turns physical forms into actionable production data.",
+    proyectosAviScanLink: "Discover AviScan →",
+    proyectosAviScanAndroid: "Install Android pilot",
+    proyectosAviScanIosDownload: "Download iPhone pilot",
+    proyectosAviScanIosAccess: "Request iPhone access",
+
+    proyectosEnFocoTitle: "EnFoco",
+    proyectosEnFocoText:
+      "Organize tasks, routines and work cycles to turn consistency into visible progress.",
+    proyectosEnFocoLink: "Discover EnFoco →",
+
     proyectosKroBiTitle: "KroBi",
     proyectosKroBiText:
       "SaaS platform for data, automation and AI for companies with e-invoicing. It consolidates sales, inventory and other sources into dashboards and an intelligent agent.",
     proyectosKroBiLink: "See project →",
-
-    proyectosInerfitTitle: "Inerfit",
-    proyectosInerfitText:
-      "Modern landing page and digital support for a specialized gym. Focused on speed, user experience and converting visitors into members.",
-
-    proyectosAguaMariaTitle: "Agua María",
-    proyectosAguaMariaText:
-      "KroBi implementation: unified sales by store and channel, product harmonization, operational dashboards and automated reporting for management.",
 
     contactoTitle: "Contact",
     contactoText:
@@ -200,7 +213,7 @@ function App() {
                 <a href="#contacto" className="btn btn-primary">
                   {t.heroPrimaryBtn}
                 </a>
-                <a href="https://krobi.io" className="btn btn-secondary">
+                <a href={productsConfig.krobi.landingUrl} className="btn btn-secondary">
                   {t.heroSecondaryBtn}
                 </a>
               </div>
@@ -251,21 +264,67 @@ function App() {
             <h2 className="section-title">{t.proyectosTitle}</h2>
             <div className="cards">
               <div className="card">
+                <h3 className="card-title">{t.proyectosAviScanTitle}</h3>
+                <p className="product-status">
+                  {t.proyectosAviScanStatus} · v{productsConfig.aviscan.version}
+                </p>
+                <p className="card-text">{t.proyectosAviScanText}</p>
+                <a href={productsConfig.aviscan.landingUrl} className="card-link">
+                  {t.proyectosAviScanLink}
+                </a>
+                <div className="card-actions">
+                  {productsConfig.aviscan.android.available &&
+                    productsConfig.aviscan.android.downloadUrl && (
+                      <a
+                        href={productsConfig.aviscan.android.downloadUrl}
+                        className="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {t.proyectosAviScanAndroid}
+                      </a>
+                    )}
+                  {productsConfig.aviscan.ios.available &&
+                  productsConfig.aviscan.ios.downloadUrl ? (
+                    <a
+                      href={productsConfig.aviscan.ios.downloadUrl}
+                      className="btn btn-secondary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.proyectosAviScanIosDownload}
+                    </a>
+                  ) : (
+                    <a
+                      href={productsConfig.aviscan.landingUrl}
+                      className="btn btn-secondary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.proyectosAviScanIosAccess}
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <div className="card">
+                <h3 className="card-title">{t.proyectosEnFocoTitle}</h3>
+                <p className="card-text">{t.proyectosEnFocoText}</p>
+                <div className="card-actions">
+                  <a href={productsConfig.enfoco.landingUrl} className="card-link">
+                    {t.proyectosEnFocoLink}
+                  </a>
+                </div>
+              </div>
+
+              <div className="card">
                 <h3 className="card-title">{t.proyectosKroBiTitle}</h3>
                 <p className="card-text">{t.proyectosKroBiText}</p>
-                <a href="https://krobi.io" className="card-link">
-                  {t.proyectosKroBiLink}
-                </a>
-              </div>
-
-              <div className="card">
-                <h3 className="card-title">{t.proyectosInerfitTitle}</h3>
-                <p className="card-text">{t.proyectosInerfitText}</p>
-              </div>
-
-              <div className="card">
-                <h3 className="card-title">{t.proyectosAguaMariaTitle}</h3>
-                <p className="card-text">{t.proyectosAguaMariaText}</p>
+                <div className="card-actions">
+                  <a href={productsConfig.krobi.landingUrl} className="card-link">
+                    {t.proyectosKroBiLink}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
